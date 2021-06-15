@@ -9,8 +9,6 @@
 
 # 목표
 
----
-
 - docker 위에서 mysql 서버를 올려보기
 - `dockerfile`을 안쓰고 `docker-compose.yml`만으로 올리기
 
@@ -18,15 +16,11 @@
 
 # 해야 할 것
 
----
-
 - [x]  `docker-compose.yml` 를 작성하기
 
 </br>
 
 # 코드 작성
-
----
 
 ### `docker-compose.yml` 를 작성하기
 
@@ -66,8 +60,6 @@ yml 파일 포맷 버전
 
 # **실행 확인**
 
----
-
 ![result-01](readme/result-01.png)
 
 컨테이너를 끄고싶으면 `docker compose down` 을 쓰자. 
@@ -76,15 +68,11 @@ yml 파일 포맷 버전
 
 # 후기
 
----
-
 mysql은 dockerfile 안쓰고 해서 그런지 docker-compose를 공부하기 좋다.
 
 </br>
 
 # QA
-
----
 
 - mysql 단독으로 쓰는데 포트가 왜 필요하나? 싶은데... 포트 지정을 안하면 에러가 뜬다. 왜일까?
 
@@ -95,8 +83,6 @@ mysql은 dockerfile 안쓰고 해서 그런지 docker-compose를 공부하기 �
 </br>
 
 # Ref
-
----
 
 [DockerCompose로 개발 환경 구성하기](http://raccoonyy.github.io/docker-usages-for-dev-environment-setup/) - "db 서비스와 달리 앱 서비스는 도커 이미지를 빌드할 일이 잦기 때문에, 특정 이미지 대신 build 옵션을 추가합니다."
 
