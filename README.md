@@ -31,25 +31,15 @@ services:
       - "5000:3306"
 ```
 
-`version: "3.9"` 
+`version: "3.9"` : yml 파일 포맷 버전
 
-yml 파일 포맷 버전
+`services: db` : 컨테이너에 올릴 서비스 이름. 아무렇게나 지어도 됨.
 
-`services: db`
+`image: mysql` : 컨테이너에 올릴 도커 이미지. 제대로 적기만 하면 dockerhub에서 알아서 다운받아진다.
 
-컨테이너에 올릴 서비스 이름. 아무렇게나 지어도 됨.
+`ports: - "5000:3306"` : "{호스트OS가 여는 포트}:{컨테이너가 여는 포트}". mysql 은 기본 포트가 3306이니까 내부 포트는 3306으로 고정. 외부 포트는 하고싶은대로 하면 됨.
 
-`image: mysql`
-
-컨테이너에 올릴 도커 이미지. 제대로 적기만 하면 dockerhub에서 알아서 다운받아진다.
-
-`ports: - "5000:3306"`
-
-"{호스트OS가 여는 포트}:{컨테이너가 여는 포트}". mysql 은 기본 포트가 3306이니까 내부 포트는 3306으로 고정. 외부 포트는 하고싶은대로 하면 됨.
-
-`envirionment: MYSQL_ROOT_PASSWORD: "1111"`
-
-환경변수 (호스트OS가 있어야 작동하는거 아닌가?)
+`envirionment: MYSQL_ROOT_PASSWORD: "1111"` : 환경변수 (호스트OS가 있어야 작동하는거 아닌가?)
 
 </br>
 
@@ -57,7 +47,8 @@ yml 파일 포맷 버전
 
 ![result-01](readme/result-01.png)
 
-컨테이너를 끄고싶으면 `docker compose down` 을 쓰자. 
+- 컨테이너를 끄고싶으면 `docker compose down` 을 쓰자. 
+
 
 </br>
 
@@ -73,7 +64,8 @@ mysql은 dockerfile 안쓰고 해서 그런지 docker-compose를 공부하기 �
 
 ![qa-01](readme/qa-01.png)
 
-포트 지정을 안해주니 네트워크를 못찾는데... 근데 저 daemon은 뭐하는 놈이지?
+- 포트 지정을 안해주니 네트워크를 못찾는데... 근데 저 daemon은 뭐하는 놈이지?
+
 
 </br>
 
